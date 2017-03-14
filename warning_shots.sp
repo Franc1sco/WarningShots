@@ -1,3 +1,20 @@
+/*  SM Warning Shots
+ *
+ *  Copyright (C) 2017 Francisco 'Franc1sco' Garc√≠a
+ * 
+ * This program is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the Free
+ * Software Foundation, either version 3 of the License, or (at your option) 
+ * any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT 
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with 
+ * this program. If not, see http://www.gnu.org/licenses/.
+ */
+
 #pragma semicolon 1
 #include <sourcemod>
 #include <sdkhooks>
@@ -13,7 +30,7 @@ public Plugin:myinfo =
 	author = "Franc1sco Steam: franug",
 	description = "Warning Shots for jail server",
 	version = VERSION,
-	url = "www.servers-cfg.foroactivo.com"
+	url = "http://steamcommunity.com/id/franug"
 };
 
 public OnPluginStart()
@@ -63,8 +80,8 @@ public Action:HookTraceAttack(victim, &attacker, &inflictor, &Float:damage, &dam
 
        // nota: como es pagina inglesa tengo que publicarlo aqui en ingles por defecto :s (english translate: in this web is english for default)
        //
-       //PrintToChat(victim, "\x04[SM_WarningShots] \x01El guardia \x03%N \x01 te ha dado un disparo de aviso!", attacker); // en espaÒol
-       //PrintToChat(attacker, "\x04[SM_WarningShots] \x01Has dado un disparo de aviso al prisionero \x03%N \x01!", victim); // en espaÒol
+       //PrintToChat(victim, "\x04[SM_WarningShots] \x01El guardia \x03%N \x01 te ha dado un disparo de aviso!", attacker); // en espa√±ol
+       //PrintToChat(attacker, "\x04[SM_WarningShots] \x01Has dado un disparo de aviso al prisionero \x03%N \x01!", victim); // en espa√±ol
 
        PrintToChat(victim, "\x04[SM_WarningShots] \x01The guard \x03%N \x01 has given you a warning shot", attacker); // english
        PrintToChat(attacker, "\x04[SM_WarningShots] \x01You have given a warning shot to prisoner \x03%N \x01", victim); // english
